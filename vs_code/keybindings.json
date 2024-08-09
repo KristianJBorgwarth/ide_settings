@@ -1,0 +1,134 @@
+[
+  // Keybinding for toggling the explorer view
+  {
+    "key": "alt+1",
+    "command": "workbench.view.explorer",
+    "when": "!auxiliaryBarFocus"
+  },
+  {
+    "key": "alt+1",
+    "command": "workbench.action.closeAuxiliaryBar",
+    "when": "auxiliaryBarVisible"
+  },
+  // Keybinding for toggling the debug view
+  {
+    "key": "alt+2",
+    "command": "workbench.view.debug",
+    "when": "!sideBarVisible || activeViewlet != 'workbench.view.debug'"
+  },
+  {
+    "key": "alt+2",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarVisible && activeViewlet == 'workbench.view.debug'"
+  },
+  // Keybinding for toggling the extensions view
+  {
+    "key": "alt+7",
+    "command": "workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+  },
+  {
+    "key": "alt+7",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarVisible && activeViewlet == 'workbench.view.extensions'"
+  },
+  // Keybinding for toggling the test view
+  {
+    "key": "alt+8",
+    "command": "workbench.view.extension.test",
+    "when": "!sideBarVisible || activeViewlet != 'workbench.view.extension.test'"
+  },
+  {
+    "key": "alt+8",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarVisible && activeViewlet == 'workbench.view.extension.test'"
+  },
+  // Keybindings for file explorer actions
+  {
+    "key": "ctrl+alt+insert",
+    "command": "explorer.newFolder"
+  },
+  {
+    "key": "ctrl+shift+insert",
+    "command": "explorer.newFile"
+  },
+  // Keybindings for terminal actions
+  {
+    "key": "ctrl+alt+1",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+alt+1",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  // Keybinding for running all tests
+  {
+    "key": "ctrl+r",
+    "command": "test-explorer.run-all",
+    "when": "activeViewlet == workbench.view.extension.test"
+  },
+  // Removing default keybinding for opening editor at index 1
+  {
+    "key": "alt+1",
+    "command": "-workbench.action.openEditorAtIndex1"
+  },
+  // Removing default keybinding for extensions view
+  {
+    "key": "ctrl+shift+x",
+    "command": "-workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+  },
+  // Keybindings for quick fix and auto fix in the editor
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+oem_period",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+enter",
+    "command": "editor.action.autoFix",
+    "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+  },
+  {
+    "key": "shift+alt+oem_period",
+    "command": "-editor.action.autoFix",
+    "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+  },
+  // Keybindings for moving editor groups
+  {
+    "key": "ctrl+shift+right",
+    "command": "-cursorWordEndRightSelect",
+    "when": "textInputFocus && !accessibilityModeEnabled"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "ctrl+shift+left",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "-workbench.action.moveEditorToPreviousGroup"
+  },
+  // Removing default keybinding for accepting quick input in background
+  {
+    "key": "ctrl+alt+right",
+    "command": "-quickInput.acceptInBackground",
+    "when": "cursorAtEndOfQuickInputBox && inQuickInput && quickInputType == 'quickPick' || inQuickInput && !inputFocus && quickInputType == 'quickPick'"
+  },
+  // Removing default keybinding for debug view
+  {
+    "key": "ctrl+shift+d",
+    "command": "-workbench.view.debug",
+    "when": "viewContainer.workbench.view.debug.enabled"
+  }
+]
