@@ -55,13 +55,8 @@
   // Keybindings for terminal actions
   {
     "key": "ctrl+alt+1",
-    "command": "workbench.action.terminal.new",
-    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
-  },
-  {
-    "key": "ctrl+alt+1",
     "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
+    "when": "terminalFocus || terminalIsOpen"
   },
   // Keybinding for running all tests
   {
@@ -130,5 +125,31 @@
     "key": "ctrl+shift+d",
     "command": "-workbench.view.debug",
     "when": "viewContainer.workbench.view.debug.enabled"
+  },
+  {
+    "key": "ctrl+f4",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+alt+2",
+    "command": "workbench.action.terminal.newWithCwd",
+    "args": {
+      "cwd": "${workspaceFolder}",
+      "shellPath": "/bin/bash"
+    }
+  },
+  {
+    "key": "ctrl+right",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
   }
 ]
