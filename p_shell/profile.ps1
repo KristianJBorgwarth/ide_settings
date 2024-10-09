@@ -1,4 +1,4 @@
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\M365Princess.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\zash.custom.omp.json" | Invoke-Expression
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
@@ -9,4 +9,3 @@ Set-PSReadLineKeyHandler -Key Tab -Function AcceptSuggestion
 function Touch {
 		    New-Item -Path $args[0] -ItemType "File" -Force
  }
-		    	    
