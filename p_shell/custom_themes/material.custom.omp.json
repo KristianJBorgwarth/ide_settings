@@ -13,36 +13,28 @@
         {
           "foreground": "#56B6C2",
           "properties": {
-            "style": "folder"
+            "style": "agnoster_short"
           },
           "style": "plain",
           "template": " {{ .Path }} ",
           "type": "path"
         },
         {
-          "foreground": "#D0666F",
+          "foreground": "#c73ecc",
           "properties": {
             "branch_icon": "",
-            "fetch_status": false
+            "fetch_status": false,
+            "fetch_upstream_icon": true
           },
           "style": "plain",
-          "template": "<#5FAAE8>git:(</>{{ .HEAD }}<#5FAAE8>)</>",
+          "template": "<#5FAAE8>{{.UpstreamIcon}}\ue725(</>{{ .HEAD }}<#5FAAE8>)</>",
           "type": "git"
         },
         {
-          "foreground": "#DCB977",
+          "foreground": "#ffffff",
           "style": "plain",
-          "template": " \uf119",
-          "type": "status"
-        },
-        {
-          "foreground": "#66F68F",
-          "properties": {
-            "time_format": "15:04"
-          },
-          "style": "plain",
-          "template": " {{ .CurrentDate | date .Format }} ",
-          "type": "time"
+          "template": "<#69FF94>\u276f</>",
+          "type": "text"
         }
       ],
       "type": "prompt"
