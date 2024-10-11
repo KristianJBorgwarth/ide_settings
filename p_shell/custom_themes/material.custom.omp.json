@@ -38,6 +38,20 @@
         }
       ],
       "type": "prompt"
+    },
+    {
+      "type": "rprompt",
+      "segments": [
+        {
+          "foreground": "#00cc74",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "style": "plain",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        }
+      ]
     }
   ],
   "version": 2
